@@ -3,11 +3,15 @@
 using namespace std;
 #include "Board.h"
 
+Board::Board() {
+
+}
+
 Board::Board(vector<vector<int>> x, vector<vector<int>> y) {
 	x_dim = x.size();
 	y_dim = y.size();
 
-	board = vector<vector<int>>(x_dim, vector<int>(y_dim, 0));
+	board = vector<vector<int>>(x_dim, vector<int>(y_dim, 2));
 
 
 }
@@ -18,7 +22,7 @@ void Board::mark_X(int x, int y) {
 }
 
 void Board::mark_O(int x, int y) {
-	board[x][y] = O;
+	board[x][y] = on;
 
 }
 
